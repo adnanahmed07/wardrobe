@@ -9,7 +9,6 @@ $(".handles").hide();
 $(".add_to_cart").hide();
 $(".sa_text").hide();
 $(".door-style").hide();
-$(".door-color").hide();
 
 let selectedValue = "";
 
@@ -25,17 +24,12 @@ $('input[name="Style"]').on("change", function () {
     selectedValue = $(this).val();
 
     $("button").attr("data-item-custom2-value", $(this).val());
-
-    $(".door-color").show();
-    $('input[name="door-color"]').on("change", function () {
-      $("button").attr("data-item-custom12-name", "Door Colour");
-      $("button").attr("data-item-custom12-type", "readonly");
-      $("button").attr("data-item-custom12-value", $(this).val());
-      doorColorValue = $(this).val();
+    
+      rangeValue = $(this).val();
       $(".door-style").hide();
       // Show the corresponding door based on doorColorValue
-      if (doorColorValue === "White") {
-        $(".white_door").show();
+      if (rangeValue === "Bella") {
+        $(".bella_door").show();
         $('input[name="white_door"]').on("change", function () {
           $("button").attr("data-item-custom13-name", "Door Style");
           $("button").attr("data-item-custom13-type", "readonly");
@@ -44,8 +38,8 @@ $('input[name="Style"]').on("change", function () {
           $(this).siblings(".door_text").addClass("active");
           $(".wardrobe_select").show();
         });
-      } else if (doorColorValue === "Grey") {
-        $(".grey_door").show();
+      } else if (rangeValue === "Valore") {
+        $(".valore_door").show();
         $('input[name="grey_door"]').on("change", function () {
           $("button").attr("data-item-custom13-name", "Door Style");
           $("button").attr("data-item-custom13-type", "readonly");
@@ -54,9 +48,9 @@ $('input[name="Style"]').on("change", function () {
           $(this).siblings(".door_text").addClass("active");
           $(".wardrobe_select").show();
         });
-      } else if (doorColorValue === "Urban Oak") {
+      } else if (rangeValue === "Zurfiz") {
         $(".urbanoak_door").show();
-        $('input[name="urbanoak_door"]').on("change", function () {
+        $('input[name="zurfiz_door"]').on("change", function () {
           $("button").attr("data-item-custom13-name", "Door Style");
           $("button").attr("data-item-custom13-type", "readonly");
           $("button").attr("data-item-custom13-value", $(this).val());

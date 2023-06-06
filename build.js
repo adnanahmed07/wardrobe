@@ -29,7 +29,7 @@ $('input[name="Style"]').on("change", function () {
       // Show the corresponding door based on doorColorValue
       if (selectedValue === "Bella (££)") {
         $(".bella_door").show();
-        $('input[name="white_door"]').on("change", function () {
+        $('input[name="bella_door"]').on("change", function () {
           $("button").attr("data-item-custom13-name", "Door Style");
           $("button").attr("data-item-custom13-type", "readonly");
           $("button").attr("data-item-custom13-value", $(this).val());
@@ -39,7 +39,7 @@ $('input[name="Style"]').on("change", function () {
         });
       } else if (selectedValue === "Valore (£)") {
         $(".valore_door").show();
-        $('input[name="grey_door"]').on("change", function () {
+        $('input[name="valore_door"]').on("change", function () {
           $("button").attr("data-item-custom13-name", "Door Style");
           $("button").attr("data-item-custom13-type", "readonly");
           $("button").attr("data-item-custom13-value", $(this).val());
@@ -48,7 +48,7 @@ $('input[name="Style"]').on("change", function () {
           $(".wardrobe_select").show();
         });
       } else if (selectedValue === "Zurfiz (£££)") {
-        $(".urbanoak_door").show();
+        $(".zurfiz_door").show();
         $('input[name="zurfiz_door"]').on("change", function () {
           $("button").attr("data-item-custom13-name", "Door Style");
           $("button").attr("data-item-custom13-type", "readonly");
